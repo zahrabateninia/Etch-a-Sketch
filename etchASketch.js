@@ -6,8 +6,8 @@ function createGrid(rows, cols) {
     container.style.height = "480px";
     container.style.display = 'flex';
     container.style.flexWrap = 'wrap';
-    container.style.justifyContent = 'center';
-    container.style.alignItems = 'center';
+    container.style.marginLeft ='auto';
+    container.style.marginRight ='auto';
     container.style.marginTop = '30px';
 
     container.style.border = '3px solid black';
