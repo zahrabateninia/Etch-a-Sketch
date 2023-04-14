@@ -21,9 +21,18 @@ function createGrid(rows) {
       cell.style.boxSizing = 'border-box';//the browser accounts the border
       cell.style.height = `${numPixels}px`;
       container.appendChild(cell);
-      cell.addEventListener('mouseover' , () => {
-        cell.style.backgroundColor = 'black';
-      });
+      function changeColor(e){
+        const cell = e.target; //the cell that the mouseover event happened to it
+        const x = e.offsetX / cell.clientWidth;//a number btw 0and 1
+        const y = e.offsetY / cell.clientHeight;
+        const red = Math.round(x * 255);
+        const green = Math.round((1 - x - y) * 255);
+        const blue = Math.round(y * 255);
+        const color = `rgb(${red}, ${green}, ${blue})`;
+        cell.style.backgroundColor = color;
+      }
+      cell.addEventListener('mouseover' , changeColor);
+    
     }
     document.body.appendChild(container);//added at the bottom of body
   }//end if func
