@@ -1,14 +1,11 @@
-body{
-    background-color: var(--background-color);
-    --background-color: #FF1744;    ;
-    /* #A7FFEB */
+:root{
+    background: linear-gradient( black , white) ;
+    /* #FF1744 , #A7FFEB   */
 }
 header{
     color: white;
     background-color: var(--background-color);
     font-size: 1.8rem;
-    /* text-shadow: 4px 4x 4px black; */
-    text-shadow: 2px 2px 2px gray;
 }
 h1{
     text-align: center;
@@ -18,7 +15,7 @@ h1{
     justify-content: center;
 }
 #change-pixel-btn {
-    background-color: #18FFFF;    ;
+    background-color: #FF1744 ;    ;
     font-size: 1rem;
     margin: 10px;
     padding: 10px;
@@ -26,5 +23,5 @@ h1{
 
 }
 #change-pixel-btn:hover{
-    box-shadow: 3px 4px 3px #00695C;
+    box-shadow: 3px 4px 3px #FF1744 ;
 }

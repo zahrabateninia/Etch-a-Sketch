@@ -8,9 +8,10 @@ function createGrid(rows) {
     container.style.flexWrap = 'wrap'; //very imp 
     container.style.marginLeft ='auto';//gird in the center of page
     container.style.marginRight ='auto';
+    container.style.marginBottom = '60px';
     container.style.marginTop = '30px';
     container.style.border = '3px solid black';
-    container.style.boxShadow = '3px 3px 4px #00695C';
+    container.style.boxShadow = '3px 3px 4px black';
     container.style.backgroundColor = 'white';
     
     for (let i = 0; i < rows * rows; i++) { //if row =16 we need 256 square in the grid
@@ -18,6 +19,7 @@ function createGrid(rows) {
       cell.classList.add('grid-cell');
       cell.style.flexBasis = `calc(100% / ${rows})`; //initial size of the cell
       cell.style.margin='0';
+      cell.style.border= '1px solid gray';
       cell.style.boxSizing = 'border-box';//the browser accounts the border
       cell.style.height = `${numPixels}px`;
       container.appendChild(cell);
