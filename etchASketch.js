@@ -50,7 +50,11 @@ function changePixels(rows) {
     let newRows = parseInt(prompt('How many pixels do you desire? '));
       if (100 < newRows){
         alert('Sorry, the number of squares per side CANNOT be more than 100');
-      }else{
+        return;
+      }else if(!newRows){
+        return promptBtn();
+      }
+      else{
         container.innerHTML= '';
         return changePixels(newRows);
       }
